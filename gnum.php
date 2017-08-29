@@ -11,13 +11,23 @@
         return $ret;
     }
 
-    if (!isset($_GET['answer'])){
-        $answer = createAnswer(3);
-    }else{
-        $answer = $_GET['answer'];
+    function checkAB($a, $g){
+
+        return '1A2B';
     }
 
-    echo $answer;
+    $result = '';
+    if (!isset($_GET['answer'])){
+        // 首次進入
+        $answer = createAnswer(3);
+    }else{
+        // 已經開始猜了
+        $answer = $_GET['answer'];
+        $guess = $_GET['guess'];
+        $result = checkAB($answer, $guess);
+    }
+
+    echo $result;
 
 ?>
 <form>
