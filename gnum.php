@@ -14,8 +14,8 @@
     function checkAB($a, $g){
         $A = $B = 0;
         for ($i = 0; $i<strlen($g); $i++){
-            $check = substr($g, $i, 1);
-            if ($check == substr($a, $i, 1)){
+            $check = $g[$i];
+            if ($check == $a[$i]){
                 $A++;
             }else if (substr_count($a,$check,0,strlen($a))>0){
                 $B++;
