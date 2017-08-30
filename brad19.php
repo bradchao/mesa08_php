@@ -1,3 +1,9 @@
+<?php
+    if (isset($_REQUEST['error'])){
+        echo '請輸入正確資料';
+    }
+?>
+
 <script>
     function chForm() {
 
@@ -42,4 +48,15 @@
     <input type="password" name="passwd"><br>
     <input type="submit" value="OK">
 </form>
+<hr>
+<form action="brad22.php">
+    <input type="text" name="account" /><br>
+    <input type="submit" value="OK">
+</form>
+
+
+
+
+
+
 
