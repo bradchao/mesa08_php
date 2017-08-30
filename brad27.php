@@ -25,6 +25,7 @@
         echo 'Copy Fail';
     }
 
+    unlink("./dir2/file2");
 
 
 
@@ -32,4 +33,3 @@
 
 
 
-    
