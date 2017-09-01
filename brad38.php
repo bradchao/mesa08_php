@@ -1,6 +1,6 @@
 <?php
 // 1. 創畫布(1. 白 2. 計有圖)
-$imgS = ImageCreateFromJPEG("./imgs/w.jpg");
+$imgS = ImageCreateFromJPEG("./imgs/h.jpg");
 $imgT = ImageCreate(200,200);
 
 // 2. 開始畫
@@ -15,12 +15,15 @@ if ($imgSH > $imgSW){
     $imgTH = $imgSH * $imgTW / $imgSW;
 }
 //echo "{$imgTW} x {$imgTH}";
-
+$whilt = imagecolorallocate($imgT, 255,255,255);
+imagefilledrectangle($imgT,0,0,200,200,$whilt);
+imagecopyresized ( $imgT , $imgS , 0 , 0 , 0 , 0 ,
+    $imgTW , $imgTH , $imgSW , $imgSH );
 
 
 // 3. 記憶體 -> 輸出 (1. 畫面 2. 檔案)
-//header("Content-type: image/jpeg");
-//imagejpeg($img);
+header("Content-type: image/jpeg");
+imagejpeg($imgT);
 
 // 4. 清除
 imagedestroy($imgS);
