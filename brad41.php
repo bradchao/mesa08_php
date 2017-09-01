@@ -1,0 +1,2 @@
+<?php
+    $myCart = new Cart;
