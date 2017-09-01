@@ -64,3 +64,7 @@
                 session_id(), time() + $expire);
         }
     }
+
+    class Brad {
+        var $Var1;
+    }
