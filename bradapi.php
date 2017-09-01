@@ -30,6 +30,9 @@
         function getBuylist(){
             return $this->buylist;
         }
+        function getMember(){
+            return $this->member;
+        }
 
     }
 
