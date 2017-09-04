@@ -12,6 +12,7 @@
 ?>
 <h1>Edit Member</h1>
 <form action="brad59.php">
+    <input type="hidden" name="id" value="<?php echo $editid; ?>">
     Account: <input name="account" value="<?php echo $data->account; ?>"/><br>
     Password: <input type="password" name="passwd" /><br>
     Real name: <input name="realname" value="<?php echo $data->realname; ?>" /><br>
