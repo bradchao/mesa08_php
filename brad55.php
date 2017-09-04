@@ -14,6 +14,11 @@
 
 
 ?>
+<script>
+    function del_confirm(name) {
+        return confirm("delete " + name);
+    }
+</script>
 <a href="brad57.php">New Member</a><hr>
 <table border="1" width="100%">
     <tr>
@@ -22,6 +27,7 @@
         <th>Password</th>
         <th>Real name</th>
         <th>del</th>
+        <th>edit</th>
     </tr>
     <?php
 
@@ -31,7 +37,8 @@
             echo "<td>{$data->account}</td>";
             echo "<td>{$data->passwd}</td>";
             echo "<td>{$data->realname}</td>";
-            echo "<td><a href='?delid={$data->id}'>del</td>";
+            echo "<td><a href='?delid={$data->id}' onclick='return del_confirm(\"{$data->account}\");'>del</td>";
+            echo "<td><a href='brad58.php?editid={$data->id}'>edit</td>";
             echo '</tr>';
         }
 
