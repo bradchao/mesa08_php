@@ -6,9 +6,15 @@
     function mycb(data, status) {
         $("#here").html(data + ":" + status);
     }
-</script>
 
-<input type="button" onclick="test1()" value="Click Me"/>
-<div id="here"></div>
+    function test2() {
+        // 檢查資料是否重複
+    }
+
+
+</script>
+<input id="account" onblur="test2()"/><span id="mesg"></span><br>
+<input id="passwd" /><br>
+
 
 
