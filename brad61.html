@@ -1,0 +1,14 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    function test1() {
+        $.get("brad62.php",mycb);
+    }
+    function mycb(data, status) {
+        $("#here").html(data + ":" + status);
+    }
+</script>
+
+<input type="button" onclick="test1()" value="Click Me"/>
+<div id="here"></div>
+
+
