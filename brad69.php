@@ -7,7 +7,7 @@ $a = array(1,2,3,'Brad',5, true);
 //echo '<hr>';
 
 $b = array(1,'name' => 'brad',3, 'stage' => 4,5);   // Object
-echo json_encode($b);
+//echo json_encode($b);
 //echo '<hr>';
 
 
@@ -34,7 +34,7 @@ $cart3->list = array('p011'=>123, 'p024'=>13, 'p108'=>3);
 
 $c = array($cart1, $cart2, $cart3);
 
-//echo json_encode($c);
+echo json_encode($c);
 //echo '<hr>';
 
 
