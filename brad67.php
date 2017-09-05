@@ -1,6 +1,6 @@
 <?php
 $mysqli = new mysqli('localhost','root','root','iii');
-$sql = "SELECT * FROM food";
+$sql = "SELECT * FROM food WHERE 1 ORDER BY lng DESC";
 $result = $mysqli->query($sql);
 ?>
 <table width="100%" border="1">
